@@ -6,13 +6,12 @@ pkgver=20201219
 pkgrel=1
 arch=('any')
 url="https://gitlab.manjaro.org/profiles-and-settings/$_pkgbase"
-_branch=master
+_branch=sway
 license=('GPL')
 pkgdesc='Manjaro Linux sway settings'
 groups=('sway-manjaro')
 depends=('waybar'
         'swaylock'
-        'swaynag'
         'wofi'
         'swayidle'
         'pamixer'
@@ -21,9 +20,7 @@ depends=('waybar'
         'grim'
         'mako'
         'gnome-keyring'
-	'blueberry'
-	
-)
+	    'blueberry')
 makedepends=('git')
 optdepends=('gedit: the default text editor'
         'sterminal: the default terminal'
