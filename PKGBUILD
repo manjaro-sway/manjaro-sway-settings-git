@@ -2,7 +2,7 @@
 
 _pkgbase=desktop-settings
 pkgname=manjaro-sway-settings
-pkgver=20201219
+pkgver=20201220
 pkgrel=1
 arch=('any')
 url="https://gitlab.manjaro.org/profiles-and-settings/$_pkgbase"
@@ -20,7 +20,8 @@ depends=('waybar'
         'grim'
         'mako'
         'gnome-keyring'
-	    'blueberry')
+	    'blueberry'
+        'manjaro-base-skel')
 makedepends=('git')
 optdepends=('gedit: the default text editor'
         'sterminal: the default terminal'
@@ -41,4 +42,6 @@ package() {
     cd $_pkgbase
     install -d $pkgdir/etc
     cp -r community/sway/skel $pkgdir/etc
+    install -d $pkgdir/usr/share/glib-2.0/schemas
+    cp community/bspwm/schemas/* $pkgdir/usr/share/glib-2.0/schemas
 }
