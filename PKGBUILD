@@ -20,7 +20,7 @@ depends=('waybar'
         'grim'
         'mako'
         'gnome-keyring'
-	    'blueberry'
+	'blueberry'
         'manjaro-base-skel')
 makedepends=('git')
 optdepends=('gedit: the default text editor'
