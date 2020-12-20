@@ -20,7 +20,7 @@ depends=('waybar'
         'grim'
         'mako'
         'gnome-keyring'
-	'blueberry'
+        'blueberry'
         'manjaro-base-skel')
 makedepends=('git')
 optdepends=('gedit: the default text editor'
@@ -43,5 +43,5 @@ package() {
     install -d $pkgdir/etc
     cp -r community/sway/skel $pkgdir/etc
     install -d $pkgdir/usr/share/glib-2.0/schemas
-    cp community/bspwm/schemas/* $pkgdir/usr/share/glib-2.0/schemas
+    cp community/sway/schemas/* $pkgdir/usr/share/glib-2.0/schemas
 }
