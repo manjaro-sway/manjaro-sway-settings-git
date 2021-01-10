@@ -1,47 +1,55 @@
-# Maintainer: Simon Büeler <simon.bueeler@icloud.com>
+# Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
-_pkgbase=desktop-settings
 pkgname=manjaro-sway-settings
-pkgver=20201220
+pkgver=1.0.0
 pkgrel=1
 arch=('any')
+_pkgbase=desktop-settings
 url="https://gitlab.manjaro.org/profiles-and-settings/$_pkgbase"
-_branch=sway
 license=('GPL')
-pkgdesc='Manjaro Linux sway settings'
+pkgdesc='Manjaro Sway Settings'
 groups=('sway-manjaro')
-depends=('waybar'
-        'swaylock'
-        'wofi'
-        'swayidle'
-        'pamixer'
-        'playerctl'
-        'light'
-        'grim'
-        'mako'
-        'gnome-keyring'
-        'blueberry'
-        'manjaro-base-skel')
+depends=(
+    'manjaro-base-skel'
+    'waybar' # configurable bar
+    'light' # cli to control brightness
+    'mako' # desktop notifications
+    'sway' # the desktop manager
+    'sbdp' # sway config docs parser
+    'sway-launcher-desktop' # tui launcher application
+    'swaylock' # lockscreen
+    'grim' # screenshot tool
+    'slurp' # helper for grim
+    'wob' # wayland overlay bar for brightness and volume
+    'termite' # configurable terminal application
+    'wlogout' # nice logout menu
+    'noto-fonts-emoji' # emji font
+    'nerd-fonts-roboto-mono' # default monospace font
+    'ttf-material-design-icons-webfont' # material design icons used in waybar
+    'python-hjson' # cleaning json in config files
+    'jq' # parsing and manipulating json
+    'khal' # calendar application around caldav
+    'lm_sensors' # display sensor information
+)
 makedepends=('git')
-optdepends=('gedit: the default text editor'
-        'sterminal: the default terminal'
-        'vim: the default cli text editor'
-        'spacefm: the default file manager'
-        'gtk-theme-breath: the default gtk theme'
-        'breeze-maia-icon-themes: the default icon theme')
-conflicts=('manjaro-desktop-settings')
+optdepends=(
+    'ranger: a keyboard centric file manager'
+    'qutebrowser: a keyboard-centric browser'
+    'flashfocus: better flashing on focus changes'
+    'swaylock-effects: swaylock with nicer effects'
+    'wlsunset: time & place based light temperature'
+    'kanshi: automatically load matching output profiles'
+    'autotiling: automated tiling'
+)
+conflicts=('manjaro-desktop-settings' 'manjaro-sway-settings-git')
 provides=('manjaro-desktop-settings')
+_branch=sway
 source=("git+$url.git#branch=$_branch")
-sha256sums=('SKIP')
-
-pkgver() {
-    date +%Y%m%d
-}
+md5sums=("SKIP")
 
 package() {
-    cd $_pkgbase
     install -d $pkgdir/etc
-    cp -r community/sway/skel $pkgdir/etc
-    install -d $pkgdir/usr/share/glib-2.0/schemas
-    cp community/sway/schemas/* $pkgdir/usr/share/glib-2.0/schemas
+    install -d $pkgdir/usr
+    cp -r $_pkgbase/community/sway/etc/* "${pkgdir}/etc/"
+    cp -r $_pkgbase/community/sway/usr/* "${pkgdir}/usr/" 
 }
