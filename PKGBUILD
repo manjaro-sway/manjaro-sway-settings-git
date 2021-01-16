@@ -1,11 +1,11 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
 pkgname=manjaro-sway-settings
-pkgver=20200110
+pkgver=1.0.0
 pkgrel=1
 arch=('any')
 _pkgbase=desktop-settings
-url="https://gitlab.manjaro.org/profiles-and-settings/$_pkgbase"
+url="https://github.com/Manjaro-Sway/$_pkgbase/"
 license=('GPL')
 pkgdesc='Manjaro Sway Settings'
 groups=('sway-manjaro')
@@ -43,17 +43,12 @@ optdepends=(
 )
 conflicts=('manjaro-desktop-settings' 'manjaro-sway-settings-git')
 provides=('manjaro-desktop-settings')
-_branch=sway
-source=("git+$url.git#branch=$_branch")
-md5sums=("SKIP")
-
-pkgver() {
-    date +%Y%m%d
-}
+source=("$pkgname-$pkgver.tar.gz::${url}/archive/${pkgver}.tar.gz")
+md5sums=("f0c85db27ec94d6819a42aa7a082837e")
 
 package() {
     install -d $pkgdir/etc
     install -d $pkgdir/usr
-    cp -r $_pkgbase/community/sway/etc/* "${pkgdir}/etc/"
-    cp -r $_pkgbase/community/sway/usr/* "${pkgdir}/usr/" 
+    cp -r $_pkgbase-$pkgver/community/sway/etc/* "${pkgdir}/etc/"
+    cp -r $_pkgbase-$pkgver/community/sway/usr/* "${pkgdir}/usr/" 
 }
