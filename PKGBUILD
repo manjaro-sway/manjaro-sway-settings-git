@@ -2,7 +2,7 @@
 
 pkgname=manjaro-sway-settings
 pkgver=2.1.2
-pkgrel=2
+pkgrel=3
 arch=('any')
 _pkgbase=desktop-settings
 url="https://github.com/Manjaro-Sway/$_pkgbase/"
@@ -31,6 +31,7 @@ depends=(
     'khal' # calendar application around caldav
     'lm_sensors' # display sensor information
     'mesa-demos' # required for terminal.sh script
+    'manjaro-sway-wallpapers' # manjaro sway themed backgrounds
 )
 makedepends=('git')
 optdepends=(
