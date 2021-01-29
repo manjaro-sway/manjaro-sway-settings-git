@@ -32,6 +32,7 @@ depends=(
     'lm_sensors' # display sensor information
     'mesa-demos' # required for terminal.sh script
     'manjaro-sway-wallpapers' # manjaro sway themed backgrounds
+    'wf-recorder' # screen recording util
 )
 makedepends=('git')
 optdepends=(
