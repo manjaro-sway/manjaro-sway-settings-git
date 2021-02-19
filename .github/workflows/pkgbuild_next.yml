@@ -1,0 +1,65 @@
+name: pkgbuild_next
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  pkgbuild:
+    runs-on: ubuntu-20.04
+    name: Build on ${{ matrix.distro }} ${{ matrix.arch }}
+    strategy:
+      matrix:
+        include:
+          - arch: aarch64
+            distro: archlinux_latest
+          - arch: amd64
+            distro: archlinux_latest
+
+    steps:
+      - uses: actions/checkout@v2.1.0
+      - uses: Manjaro-Sway/run-on-arch-action@master
+        name: build
+        id: build
+        with:
+          arch: ${{ matrix.arch }}
+          distro: ${{ matrix.distro }}
+          githubToken: ${{ github.token }}
+          setup: |
+            mkdir -p "${PWD}/artifacts"
+          dockerRunArgs: |
+            --volume "${PWD}/artifacts:/artifacts" --privileged
+          env: |
+            artifact_name: git-${{ matrix.distro }}_${{ matrix.arch }}
+          shell: /bin/sh
+          install: |
+            #manjaro-keyring 
+            pacman -Syy && \
+            pacman -Syyu --needed --noconfirm archlinux-keyring && \
+            pacman -S --noconfirm git && \
+            pacman -S --noconfirm --needed base-devel && \
+              shadow \
+              binutils \
+              fakeroot \
+              make \
+              cmake \
+              grep \
+              namcap \
+              git \
+              git-lfs \
+              go \
+              sudo \
+              yay \
+              jq \
+              libedit \
+              llvm-libs \
+              rust \
+              scdoc \
+              && pacman -Scc
+            useradd -d /builder -m builder && \
+              echo "builder ALL=(ALL) NOPASSWD: ALL" >>/etc/sudoers
+          run: |
+            sudo -u builder makepkg -s --noconfirm
