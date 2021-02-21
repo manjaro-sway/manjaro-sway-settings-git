@@ -1,7 +1,7 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
 pkgname=manjaro-sway-settings
-pkgver=4.1.3
+pkgver=4.2.0
 pkgrel=5
 arch=('any')
 _pkgbase=desktop-settings
@@ -48,7 +48,7 @@ optdepends=(
 conflicts=('manjaro-desktop-settings' 'manjaro-sway-settings-git')
 provides=('manjaro-desktop-settings')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/${pkgver}.tar.gz")
-_sourcemd5=e3cc5ee1b49ed0cc6ac3899d89b8b13d
+_sourcemd5=5c22a25667cdeb5830eda54e02e9ddd4
 md5sums=("$_sourcemd5")
 
 package() {
