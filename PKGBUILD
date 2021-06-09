@@ -18,6 +18,7 @@ depends=(
     'sbdp' # sway config docs parser
     'wofi' # launcher application
     'swaylock' # lockscreen
+    'swayidle' # idle management daemon
     'grim' # screenshot tool
     'slurp' # helper for grim
     'wob' # wayland overlay bar for brightness and volume
