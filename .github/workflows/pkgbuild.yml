@@ -1,4 +1,4 @@
-name: pkgbuild_next
+name: pkgbuild
 
 on:
   workflow_dispatch:
