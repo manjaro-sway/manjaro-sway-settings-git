@@ -2,7 +2,7 @@
 
 pkgname=manjaro-sway-settings
 pkgver=5.2.2
-pkgrel=6
+pkgrel=7
 arch=('any')
 _pkgbase=desktop-settings
 url="https://github.com/Manjaro-Sway/$_pkgbase/"
@@ -34,6 +34,8 @@ depends=(
     'mesa-demos' # required for terminal.sh script
     'manjaro-sway-wallpapers' # manjaro sway themed backgrounds
     'wf-recorder' # screen recording util
+    'wl-clipboard' # copy/paste utilities for wayland 
+    'clipman' # clipboard manager
 )
 makedepends=('git')
 optdepends=(
