@@ -2,7 +2,7 @@
 
 pkgname=manjaro-sway-settings
 pkgver=5.3.0
-pkgrel=7
+pkgrel=8
 arch=('any')
 _pkgbase=desktop-settings
 url="https://github.com/Manjaro-Sway/$_pkgbase/"
@@ -35,7 +35,6 @@ depends=(
     'manjaro-sway-wallpapers' # manjaro sway themed backgrounds
     'wf-recorder' # screen recording util
     'wl-clipboard' # copy/paste utilities for wayland 
-    'clipman' # clipboard manager
 )
 makedepends=('git')
 optdepends=(
@@ -47,6 +46,7 @@ optdepends=(
     'kanshi: automatically load matching output profiles'
     'autotiling: automated tiling'
     'kitty: terminal application with hardware acceleration'
+    'clipman: clipboard manager'
 )
 conflicts=('manjaro-desktop-settings' 'manjaro-sway-settings-git')
 provides=('manjaro-desktop-settings')
