@@ -6,7 +6,7 @@ on:
     - cron:  '*/30 * * * *'
   
 env:
-  UPSTREAM_GIT: ""
+  UPSTREAM_GIT: https://github.com/Manjaro-Sway/manjaro-sway-settings.git
 
 jobs:
   rebase:
