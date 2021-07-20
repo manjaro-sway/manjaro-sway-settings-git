@@ -1,11 +1,11 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
-pkgname=manjaro-sway-settings
-pkgver=5.5.0
-pkgrel=8
+pkgname=manjaro-sway-settings-git
+pkgver=5.5.0.r2.gc17f45c
+pkgrel=1
 arch=('any')
 _pkgbase=desktop-settings
-url="https://github.com/Manjaro-Sway/$_pkgbase/"
+url="https://github.com/Manjaro-Sway/$_pkgbase"
 license=('GPL')
 pkgdesc='Manjaro Sway Settings'
 groups=('sway-manjaro')
@@ -47,15 +47,19 @@ optdepends=(
     'autotiling: automated tiling'
     'sworkstyle: dynamic workspace names (icons) in waybar'
 )
-conflicts=('manjaro-desktop-settings' 'manjaro-sway-settings-git')
+conflicts=('manjaro-desktop-settings')
 provides=('manjaro-desktop-settings')
-source=("$pkgname-$pkgver.tar.gz::${url}/archive/${pkgver}.tar.gz")
-_sourcemd5=d291e0f55fc9cd8c0b51462adea67c01
-md5sums=("$_sourcemd5")
+source=("${_pkgbase}::git+${url}.git#branch=sway")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $_pkgbase
+  git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+}
 
 package() {
     install -d $pkgdir/etc
     install -d $pkgdir/usr
-    cp -r $_pkgbase-$pkgver/community/sway/etc/* "${pkgdir}/etc/"
-    cp -r $_pkgbase-$pkgver/community/sway/usr/* "${pkgdir}/usr/" 
+    cp -r $_pkgbase/community/sway/etc/* "${pkgdir}/etc/"
+    cp -r $_pkgbase/community/sway/usr/* "${pkgdir}/usr/" 
 }
