@@ -23,8 +23,8 @@ depends=(
     'slurp' # helper for grim
     'wob' # wayland overlay bar for brightness and volume
     'wlogout' # nice logout menu
-    'noto-fonts-emoji' # emji font
-    'kitty' # terminal application with hardware acceleration'
+    'noto-fonts-emoji' # emoji font
+    'foot' # terminal application
     'nerd-fonts-roboto-mono' # default monospace font
     'ttf-material-design-icons-webfont' # material design icons used in waybar
     'python-hjson' # cleaning json in config files
