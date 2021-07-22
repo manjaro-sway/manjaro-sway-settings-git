@@ -1,10 +1,11 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
 pkgname=manjaro-sway-settings-git
-pkgver=5.5.0.r5.g6d52cb6
+pkgver=5.5.0.r34.gc13b329
 pkgrel=1
 arch=('any')
 _pkgbase=desktop-settings
+_branch="dynamic-theming"
 url="https://github.com/Manjaro-Sway/$_pkgbase"
 license=('GPL')
 pkgdesc='Manjaro Sway Settings'
@@ -49,7 +50,7 @@ optdepends=(
 )
 conflicts=('manjaro-desktop-settings')
 provides=('manjaro-desktop-settings')
-source=("${_pkgbase}::git+${url}.git#branch=sway")
+source=("${_pkgbase}::git+${url}.git#branch=${_branch}")
 sha256sums=('SKIP')
 
 pkgver() {
