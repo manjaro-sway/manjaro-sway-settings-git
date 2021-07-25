@@ -52,6 +52,7 @@ provides=('manjaro-desktop-settings')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/${pkgver}.tar.gz")
 _sourcemd5=d291e0f55fc9cd8c0b51462adea67c01
 md5sums=("$_sourcemd5")
+install=.install
 
 package() {
     install -d $pkgdir/etc

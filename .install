@@ -1,0 +1,11 @@
+notice() {
+    echo -e "\033[0;33m## in order to update your user configuration, run: cp -rf /etc/skel/.config/* ~/.config\033[0m"
+}
+
+post_install() {
+    notice
+}
+
+post_upgrade() {
+    notice
+}
