@@ -1,7 +1,7 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
 pkgname=manjaro-sway-settings-git
-pkgver=5.5.0.r6.gceb4571
+pkgver=5.5.0.r36.g9125c27
 pkgrel=1
 arch=('any')
 _pkgbase=desktop-settings
@@ -52,15 +52,17 @@ conflicts=('manjaro-desktop-settings')
 provides=('manjaro-desktop-settings')
 source=("${_pkgbase}::git+${url}.git#branch=${_branch}")
 sha256sums=('SKIP')
+install=.install
 
 pkgver() {
-  cd $_pkgbase
-  git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+    cd $_pkgbase
+    git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
 package() {
     install -d $pkgdir/etc
     install -d $pkgdir/usr
     cp -r $_pkgbase/community/sway/etc/* "${pkgdir}/etc/"
-    cp -r $_pkgbase/community/sway/usr/* "${pkgdir}/usr/" 
+    cp -r $_pkgbase/community/sway/usr/* "${pkgdir}/usr/"
 }
+
