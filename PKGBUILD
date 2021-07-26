@@ -5,7 +5,7 @@ pkgver=5.5.0.r9.gd9716c8
 pkgrel=1
 arch=('any')
 _pkgbase=desktop-settings
-_branch="dynamic-theming"
+_branch="sway"
 url="https://github.com/Manjaro-Sway/$_pkgbase"
 license=('GPL')
 pkgdesc='Manjaro Sway Settings'
@@ -65,4 +65,3 @@ package() {
     cp -r $_pkgbase/community/sway/etc/* "${pkgdir}/etc/"
     cp -r $_pkgbase/community/sway/usr/* "${pkgdir}/usr/"
 }
-
