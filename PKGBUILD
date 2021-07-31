@@ -1,7 +1,7 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
 pkgname=manjaro-sway-settings-git
-pkgver=6.0.2.r2.g5577377
+pkgver=6.0.3.r0.g5577377
 pkgrel=1
 arch=('any')
 _pkgbase=desktop-settings
@@ -27,7 +27,6 @@ depends=(
     'noto-fonts-emoji' # emoji font
     'foot' # terminal application
     'nerd-fonts-roboto-mono' # default monospace font
-    'ttf-material-design-icons-webfont' # material design icons used in waybar
     'python-hjson' # cleaning json in config files
     'jq' # parsing and manipulating json
     'khal' # calendar application around caldav
