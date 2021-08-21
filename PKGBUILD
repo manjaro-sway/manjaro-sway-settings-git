@@ -1,7 +1,7 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
 pkgname=manjaro-sway-settings-git
-pkgver=8.1.0.r1.gd49d5b8
+pkgver=8.1.0.r1.gd49d5b85
 pkgrel=1
 arch=('any')
 _pkgbase=desktop-settings
@@ -16,7 +16,6 @@ depends=(
     'light' # cli to control brightness
     'mako' # desktop notifications
     'sway' # the desktop manager
-    'sbdp' # sway config docs parser
     'rofi-wayland' # launcher application
     'swaylock' # lockscreen
     'swayidle' # idle management daemon
