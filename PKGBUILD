@@ -2,7 +2,7 @@
 
 pkgname=manjaro-sway-settings
 pkgver=8.1.0
-pkgrel=8
+pkgrel=9
 arch=('any')
 _pkgbase=desktop-settings
 url="https://github.com/Manjaro-Sway/$_pkgbase/"
@@ -15,7 +15,6 @@ depends=(
     'light' # cli to control brightness
     'mako' # desktop notifications
     'sway' # the desktop manager
-    'sbdp' # sway config docs parser
     'rofi-wayland' # launcher application
     'swaylock' # lockscreen
     'swayidle' # idle management daemon
