@@ -1,7 +1,7 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
 pkgname=manjaro-sway-settings-git
-pkgver=8.0.0.r1.g4a37e47
+pkgver=8.1.0.r0.g4a37e47d
 pkgrel=1
 arch=('any')
 _pkgbase=desktop-settings
@@ -23,20 +23,18 @@ depends=(
     'grim' # screenshot tool
     'slurp' # helper for grim
     'wob' # wayland overlay bar for brightness and volume
-    'noto-fonts-emoji' # emoji font
     'foot' # terminal application
     'nerd-fonts-roboto-mono' # default monospace font
-    'python-hjson' # cleaning json in config files
-    'jq' # parsing and manipulating json
+    'jq' # json parsing and manipulation
     'khal' # calendar application around caldav
     'lm_sensors' # display sensor information
     'manjaro-sway-wallpapers' # manjaro sway themed backgrounds
     'wf-recorder' # screen recording util
     'wl-clipboard' # copy/paste utilities for wayland
+    'nwg-wrapper' # conky like onscreen information'
 )
 makedepends=('git')
 optdepends=(
-    'ranger: a keyboard centric file manager'
     'qutebrowser: a keyboard-centric browser'
     'flashfocus: better flashing on focus changes'
     'swaylock-effects: swaylock with nicer effects'
@@ -44,6 +42,7 @@ optdepends=(
     'kanshi: automatically load matching output profiles'
     'autotiling: automated tiling'
     'sworkstyle: dynamic workspace names (icons) in waybar'
+    'nwg-wrapper: conky like onscreen information'
 )
 conflicts=('manjaro-desktop-settings')
 provides=('manjaro-desktop-settings')
