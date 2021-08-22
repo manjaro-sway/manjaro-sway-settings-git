@@ -2,7 +2,7 @@
 
 pkgname=manjaro-sway-settings-git
 pkgver=8.2.0.r1.gbac8b3d
-pkgrel=1
+pkgrel=2
 arch=('any')
 _pkgbase=desktop-settings
 _branch="sway"
@@ -30,7 +30,6 @@ depends=(
     'manjaro-sway-wallpapers' # manjaro sway themed backgrounds
     'wf-recorder' # screen recording util
     'wl-clipboard' # copy/paste utilities for wayland
-    'nwg-wrapper' # conky like onscreen information'
 )
 makedepends=('git')
 optdepends=(
