@@ -2,7 +2,7 @@
 
 pkgname=manjaro-sway-settings
 pkgver=8.5.3
-pkgrel=9
+pkgrel=11
 arch=('any')
 _pkgbase=desktop-settings
 url="https://github.com/Manjaro-Sway/$_pkgbase/"
@@ -30,6 +30,7 @@ depends=(
     'wf-recorder' # screen recording util
     'wl-clipboard' # copy/paste utilities for wayland
     'nwg-wrapper' # conky like onscreen information'
+    'cliphist' # clipboard manager
 )
 makedepends=('git')
 optdepends=(
