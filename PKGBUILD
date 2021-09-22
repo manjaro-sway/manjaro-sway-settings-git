@@ -1,8 +1,8 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
 pkgname=manjaro-sway-settings-git
-pkgver=8.5.3.r3.g41de1c8d
-pkgrel=1
+pkgver=8.3.5.r2.g84cd1ab4
+pkgrel=2
 arch=('any')
 _pkgbase=desktop-settings
 _branch="sway"
@@ -30,6 +30,7 @@ depends=(
     'manjaro-sway-wallpapers' # manjaro sway themed backgrounds
     'wf-recorder' # screen recording util
     'wl-clipboard' # copy/paste utilities for wayland
+    'cliphist' # clipboard manager
 )
 makedepends=('git')
 optdepends=(
