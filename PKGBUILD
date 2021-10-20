@@ -31,6 +31,7 @@ depends=(
     'wf-recorder' # screen recording util
     'wl-clipboard' # copy/paste utilities for wayland
     'cliphist' # clipboard manager
+    'noto-fonts-emoji' # emoji font (e.g. weather)
 )
 makedepends=('git')
 optdepends=(
