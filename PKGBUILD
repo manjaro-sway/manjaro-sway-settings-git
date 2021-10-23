@@ -1,11 +1,11 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
 pkgname=manjaro-sway-settings-git
-pkgver=9.0.0.r1.ga357826d
-pkgrel=2
+pkgver=9.0.1.r2.g1d7c1864
+pkgrel=1
 arch=('any')
 _pkgbase=desktop-settings
-_branch="sway"
+_branch="feat/optional-cliphist"
 url="https://github.com/Manjaro-Sway/$_pkgbase"
 license=('GPL')
 pkgdesc='Manjaro Sway Settings'
