@@ -23,6 +23,7 @@ depends=(
     'slurp' # helper for grim
     'wob' # wayland overlay bar for brightness and volume
     'foot' # terminal application
+    'foot-terminfo' # terminal info for foot
     'nerd-fonts-roboto-mono' # default monospace font
     'jq' # json parsing and manipulation
     'khal' # calendar application around caldav
