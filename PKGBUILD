@@ -2,7 +2,7 @@
 
 pkgname=manjaro-sway-settings
 pkgver=9.4.0
-pkgrel=12
+pkgrel=13
 arch=('any')
 _pkgbase=desktop-settings
 url="https://github.com/Manjaro-Sway/$_pkgbase/"
@@ -22,6 +22,7 @@ depends=(
     'slurp' # helper for grim
     'wob' # wayland overlay bar for brightness and volume
     'foot' # terminal application
+    'foot-terminfo' # terminal info for foot
     'nerd-fonts-roboto-mono' # default monospace font
     'jq' # json parsing and manipulation
     'khal' # calendar application around caldav
