@@ -49,13 +49,13 @@ optdepends=(
 )
 conflicts=('manjaro-desktop-settings' 'manjaro-sway-settings-git')
 provides=('manjaro-desktop-settings')
-source=("${_pkgbase}::git+${url}.git#branch=${_branch}")
+source=("$_pkgbase-$pkgver::git+${url}.git#branch=${_branch}")
 _sourcemd5=e089f0633fca6feb202183b4249e8e34
 md5sums=("SKIP")
 install=.install
 
 pkgver() {
-    cd $_pkgbase
+    cd $_pkgbase-$pkgver
     git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
