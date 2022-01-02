@@ -5,6 +5,7 @@ pkgver=9.5.0
 pkgrel=14
 arch=('any')
 _pkgbase=desktop-settings
+_branch=sway
 url="https://github.com/Manjaro-Sway/$_pkgbase"
 license=('GPL')
 pkgdesc='Manjaro Sway Settings'
@@ -49,10 +50,15 @@ optdepends=(
 )
 conflicts=('manjaro-desktop-settings' 'manjaro-sway-settings-git')
 provides=('manjaro-desktop-settings')
-source=("$pkgname-$pkgver.tar.gz::${url}/archive/${pkgver}.tar.gz")
+source=("${_pkgbase}::git+${url}.git#branch=${_branch}")
 _sourcemd5=7080a7a190e30f0a4a74eeac840489b3
-md5sums=("$_sourcemd5")
+md5sums=("SKIP")
 install=.install
+
+pkgver() {
+    cd $_pkgbase
+    git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+}
 
 package() {
     install -d $pkgdir/etc
