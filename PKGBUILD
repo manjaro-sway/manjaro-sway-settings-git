@@ -44,6 +44,7 @@ optdepends=(
     'sworkstyle: dynamic workspace names (icons) in waybar'
     'nwg-wrapper: conky like onscreen information'
     'cliphist: clipboard manager'
+    'swaycwd: open here helper'
 )
 conflicts=('manjaro-desktop-settings' 'manjaro-sway-settings-git')
 provides=('manjaro-desktop-settings')
