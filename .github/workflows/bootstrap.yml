@@ -16,3 +16,5 @@ jobs:
       - 
         id: bootstrap
         uses: Manjaro-Sway/bootstrap-package-actions@master
+        with:
+          upstream: "https://github.com/Manjaro-Sway/manjaro-sway-settings.git"
