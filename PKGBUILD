@@ -2,7 +2,7 @@
 
 pkgname=manjaro-sway-settings-git
 pkgver=9.9.0.r4.gf6fd6830
-pkgrel=3
+pkgrel=4
 arch=('any')
 _pkgbase=desktop-settings
 _branch=sway
@@ -47,6 +47,7 @@ optdepends=(
     'cliphist: clipboard manager'
     'swaycwd: open here helper'
     'zeit: a simple time tracker'
+    'dex: execute DesktopEntry files on autostart'
 )
 conflicts=('manjaro-desktop-settings' 'manjaro-sway-settings-git')
 provides=('manjaro-desktop-settings')
