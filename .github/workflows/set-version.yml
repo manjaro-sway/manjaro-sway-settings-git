@@ -12,20 +12,22 @@ jobs:
   update-version:
     runs-on: ubuntu-latest
     steps:
-      - run: 'echo "payload: ${{ toJson(github.event.client_payload) }}"'
-      - name: check out the repo
+      - 
+        name: check out the repo
         id: checkout_repo
-        uses: actions/checkout@v3.0.2
+        uses: actions/checkout@v3.0.0
         with:
           token: ${{ secrets.PUSH_AND_TRIGGER }}
-      - name: update pkgbuild
+      -
+        name: update pkgbuild
         env:
           VERSION: ${{ github.event.client_payload.version }}
           MD5: ${{ github.event.client_payload.md5 }}
         run: |
           [ -n "$VERSION" ] && sed -i "/pkgver=/c\pkgver=${VERSION}" PKGBUILD || exit 0
           [ -n "$MD5" ] && sed -i "/_sourcemd5=/c\_sourcemd5=${MD5}" PKGBUILD || exit 0
-      - name: commit
+      - 
+        name: commit
         run: |
           git config --global user.name "Repo Update Bot"
           git config --global user.email "info@manjaro-sway.download"
