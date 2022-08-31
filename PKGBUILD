@@ -2,7 +2,7 @@
 
 pkgname=manjaro-sway-settings-git
 pkgver=11.5.0.r3.g13e5facb
-pkgrel=1
+pkgrel=2
 arch=('any')
 _pkgbase=desktop-settings
 _branch=sway
