@@ -52,9 +52,15 @@ optdepends=(
 )
 conflicts=('manjaro-desktop-settings' 'manjaro-sway-settings-git')
 provides=('manjaro-desktop-settings')
-source=("$_pkgbase-$pkgver::git+${url}.git#branch=${_branch}")
 _sourcemd5=e089f0633fca6feb202183b4249e8e34
-md5sums=("SKIP")
+source=(
+    "$pkgname-$pkgver.tar.gz::${url}/archive/${pkgver}.tar.gz"
+    "waybar-tooltips.tar.gz::https://github.com/TheChymera/waybar-tooltips/archive/0.0.1.tar.gz"
+)
+md5sums=(
+    "SKIP" # desktop settings
+    "8b48f813457d3215fe88f203253930df" # waybar tooltips
+)
 install=.install
 
 pkgver() {
