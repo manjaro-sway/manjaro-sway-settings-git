@@ -1,8 +1,8 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
 pkgname=manjaro-sway-settings-git
-pkgver=11.7.0.r1.g418e074c
-pkgrel=3
+pkgver=11.8.0
+pkgrel=1
 arch=('any')
 _pkgbase=desktop-settings
 _branch=sway
@@ -65,7 +65,7 @@ install=.install
 
 pkgver() {
     cd $_pkgbase-$pkgver
-    git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+    gh api -H "Accept: application/vnd.github+json" /repos/manjaro-sway/desktop-settings/releases --jq '.[0].tag_name'
 }
 
 package() {
