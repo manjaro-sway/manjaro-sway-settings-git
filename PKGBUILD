@@ -2,7 +2,7 @@
 
 pkgname=manjaro-sway-settings-git
 pkgver=11.9.0.r1.g17dbebcf
-pkgrel=1
+pkgrel=2
 arch=('any')
 _pkgbase=desktop-settings
 _branch=sway
@@ -54,11 +54,13 @@ conflicts=('manjaro-desktop-settings' 'manjaro-sway-settings-git')
 provides=('manjaro-desktop-settings')
 source=(
     "$_pkgbase-$pkgver::git+${url}.git#branch=${_branch}"
-    "waybar-tooltips.tar.gz::https://github.com/TheChymera/waybar-tooltips/archive/0.0.1.tar.gz"
+    "waybar-tooltips.tar.gz::https://github.com/TheChymera/waybar-tooltips/archive/0.0.4.tar.gz"
+    "https://github.com/arcolinux/arcolinux-on-the-road/raw/cfbcc902b9520cc4ff73584dd80f34c54a158c75/root/usr/local/bin/skel"
 )
 md5sums=(
     "SKIP" # desktop settings
-    "8b48f813457d3215fe88f203253930df" # waybar tooltips
+    "f900eaacb1824e05c37ac4fb4a62436d" # waybar tooltips
+    "3ce84d692c6fdbaf31e1b602bc890aa4" # skel update script from arcolinux
 )
 install=.install
 
@@ -72,6 +74,7 @@ package() {
     install -d $pkgdir/usr
     cp -r $_pkgbase-$pkgver/community/sway/etc/* "${pkgdir}/etc/"
     cp -r $_pkgbase-$pkgver/community/sway/usr/* "${pkgdir}/usr/"
-    cp -r waybar-tooltips-0.0.1/bin/waybar-tooltip-khal.py "${pkgdir}/usr/share/sway/scripts/khal.py"
-    cp -r waybar-tooltips-0.0.1/LICENSE "${pkgdir}/usr/share/sway/scripts/khal.py.LICENSE"
+    cp -r waybar-tooltips-0.0.4/bin/waybar-tooltip-khal.py "${pkgdir}/usr/share/sway/scripts/khal.py"
+    cp -r waybar-tooltips-0.0.4/LICENSE "${pkgdir}/usr/share/sway/scripts/khal.py.LICENSE"
+    cp -r skel "${pkgdir}/usr/bin/skel"
 }
