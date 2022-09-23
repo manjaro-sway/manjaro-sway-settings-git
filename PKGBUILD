@@ -2,7 +2,7 @@
 
 pkgname=manjaro-sway-settings-git
 pkgver=11.9.0.r1.g17dbebcf
-pkgrel=2
+pkgrel=4
 arch=('any')
 _pkgbase=desktop-settings
 _branch=sway
@@ -71,10 +71,10 @@ pkgver() {
 
 package() {
     install -d $pkgdir/etc
-    install -d $pkgdir/usr
+    install -d $pkgdir/usr/bin
     cp -r $_pkgbase-$pkgver/community/sway/etc/* "${pkgdir}/etc/"
     cp -r $_pkgbase-$pkgver/community/sway/usr/* "${pkgdir}/usr/"
-    cp -r waybar-tooltips-0.0.4/bin/waybar-tooltip-khal.py "${pkgdir}/usr/share/sway/scripts/khal.py"
-    cp -r waybar-tooltips-0.0.4/LICENSE "${pkgdir}/usr/share/sway/scripts/khal.py.LICENSE"
-    cp -r skel "${pkgdir}/usr/bin/skel"
+    install -D waybar-tooltips-0.0.4/bin/waybar-tooltip-khal.py "${pkgdir}/usr/share/sway/scripts/khal.py"
+    install -D waybar-tooltips-0.0.4/LICENSE "${pkgdir}/usr/share/sway/scripts/khal.py.LICENSE"
+    install -D -m 755 skel "${pkgdir}/usr/bin/skel"
 }
