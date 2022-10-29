@@ -2,7 +2,7 @@
 
 pkgname=manjaro-sway-settings-git
 pkgver=11.9.0.r4.gc626e5d9
-pkgrel=5
+pkgrel=6
 arch=('any')
 _pkgbase=desktop-settings
 _branch=sway
@@ -34,6 +34,7 @@ depends=(
     'wl-clipboard' # copy/paste utilities for wayland
     'nwg-wrapper' # conky like onscreen information'
     'noto-fonts-emoji' # emoji font (e.g. weather icons)
+    'ttf-opensans' # contains the roboto font used in a lot of places
 )
 makedepends=('git')
 optdepends=(
