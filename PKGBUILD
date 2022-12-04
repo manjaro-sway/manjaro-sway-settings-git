@@ -2,7 +2,7 @@
 
 pkgname=manjaro-sway-settings-git
 pkgver=12.1.3.r4.g7f7f91fb
-pkgrel=8
+pkgrel=9
 arch=('any')
 _pkgbase=desktop-settings
 _branch=sway
@@ -36,6 +36,7 @@ depends=(
     'noto-fonts-emoji'        # emoji font (e.g. weather icons)
     'ttf-liberation'          # contains the roboto font used in a lot of places
     'htop'                    # system monitor
+    'swappy'                  # screenshot editing tool
 )
 makedepends=('git')
 optdepends=(
@@ -52,7 +53,6 @@ optdepends=(
     'zeit: a simple time tracker'
     'dex: execute DesktopEntry files on autostart'
     'poweralertd: battery and power notifications'
-    'swappy: snapshot editing tool'
 )
 conflicts=('manjaro-desktop-settings' 'manjaro-sway-settings-git')
 provides=('manjaro-desktop-settings')
