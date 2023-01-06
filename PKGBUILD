@@ -71,7 +71,7 @@ install=.install
 
 pkgver() {
     cd $_pkgbase-$pkgver
-    git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+    git describe --long --tags --always | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
 package() {
