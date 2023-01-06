@@ -27,7 +27,7 @@ depends=(
     'foot-terminfo'           # terminal info for foot
     'nerd-fonts-roboto-mono'  # default monospace font
     'jq'                      # json parsing and manipulation
-    'khal'                    # calendar application around caldav
+    'calcurse'                # tui calendar application
     'lm_sensors'              # display sensor information
     'manjaro-sway-wallpapers' # manjaro sway themed backgrounds
     'wf-recorder'             # screen recording util
