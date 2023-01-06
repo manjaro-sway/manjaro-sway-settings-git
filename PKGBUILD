@@ -37,6 +37,7 @@ depends=(
     'ttf-liberation'          # contains the roboto font used in a lot of places
     'htop'                    # system monitor
     'swappy'                  # screenshot editing tool
+    'bluetuith'               # bluetooth management tool
 )
 makedepends=('git')
 optdepends=(
