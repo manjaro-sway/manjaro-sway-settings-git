@@ -55,6 +55,7 @@ optdepends=(
     'zeit: a simple time tracker'
     'dex: execute DesktopEntry files on autostart'
     'poweralertd: battery and power notifications'
+    'wluma: adaptive brightness based on screen contents and ALS'
 )
 conflicts=('manjaro-desktop-settings' 'manjaro-sway-settings-git')
 provides=('manjaro-desktop-settings')
