@@ -5,7 +5,6 @@ pkgver=r1842.a54e81d5
 pkgrel=2
 arch=('any')
 _pkgbase=desktop-settings
-_branch=sway
 url="https://github.com/Manjaro-Sway/$_pkgbase"
 license=('GPL')
 pkgdesc='Manjaro Sway Settings'
@@ -37,6 +36,7 @@ depends=(
     'ttf-liberation'          # contains the roboto font used in a lot of places
     'htop'                    # system monitor
     'swappy'                  # screenshot editing tool
+    'inotify-tools'           # file watchers etc
     'bluetuith'               # bluetooth management tool
     'swayr'                   # lru window switcher for sway
 )
@@ -60,7 +60,7 @@ optdepends=(
 conflicts=('manjaro-desktop-settings' 'manjaro-sway-settings-git')
 provides=('manjaro-desktop-settings')
 source=(
-    "$_pkgbase::git+${url}.git#branch=${_branch}"
+    "$_pkgbase::git+${url}.git#branch=sway"
     "https://github.com/arcolinux/arcolinux-on-the-road/raw/cfbcc902b9520cc4ff73584dd80f34c54a158c75/root/usr/local/bin/skel"
 )
 md5sums=(
