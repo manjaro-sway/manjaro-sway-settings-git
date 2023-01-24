@@ -2,7 +2,7 @@
 
 pkgname=manjaro-sway-settings-git
 pkgver=r1843.1d10af42
-pkgrel=2
+pkgrel=3
 arch=('any')
 _pkgbase=desktop-settings
 url="https://github.com/Manjaro-Sway/$_pkgbase"
@@ -24,7 +24,7 @@ depends=(
     'wob'                     # wayland overlay bar for brightness and volume
     'foot'                    # terminal application
     'foot-terminfo'           # terminal info for foot
-    'nerd-fonts-roboto-mono'  # default monospace font
+    'ttf-roboto-mono-nerd'    # default monospace font
     'jq'                      # json parsing and manipulation
     'calcurse'                # tui calendar application
     'lm_sensors'              # display sensor information
