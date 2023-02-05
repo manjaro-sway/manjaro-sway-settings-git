@@ -1,12 +1,10 @@
 name: pkgbuild
 
 on:
+  repository_dispatch:
+    types:
+      - rebase
   workflow_dispatch:
-    inputs:
-      force-update:
-        description: 'update artifacts'
-        required: false
-        default: 'false'
   push:
     branches:
       - master
@@ -18,30 +16,26 @@ concurrency:
 
 jobs:
   pkgbuild:
-    runs-on: ubuntu-20.04
+    name: pkgbuild for ${{ matrix.archlinux_arch }} for ${{ matrix.branch }}
     strategy:
       matrix:
-        archlinux_arch: [aarch64, x86_64]
         branch: [stable, testing, unstable]
-        include:
-          - archlinux_arch: aarch64
-            docker_arch: aarch64
-          - archlinux_arch: x86_64
-            docker_arch: amd64
-    name: pkgbuild for ${{ matrix.archlinux_arch }} - ${{ matrix.branch }}
+        runs-on: [buildjet-4vcpu-ubuntu-2204-arm]
+    runs-on: ${{ matrix.runs-on }}
+    container:
+      image: docker://manjarolinux/build:latest
     steps:
-      - uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # v3.3.0
-        with:
-          persist-credentials: false
-          fetch-depth: 1
+      - name: check out repo
+        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
+      - id: version
+        uses: manjaro-contrib/action-pkgbuild-info@main
       - name: pkgbuild
-        id: pkgbuild
-        uses: Manjaro-Sway/manjaro-package-action@main
+        uses: manjaro-contrib/action-makepkg@main
         with:
-          docker_arch: ${{ matrix.docker_arch }}
           branch: ${{ matrix.branch }}
-          archlinux_arch: ${{ matrix.archlinux_arch }}
-          gpg_keyid: ${{ secrets.GPG_KEYID }}
-          gpg_signing_key_base64: ${{ secrets.GPG_SECRET_KEY_BASE64 }}
-          dispatch-token: ${{ secrets.DISPATCH }}
-          force-update: ${{ github.event.inputs.force-update }}
+          release: ${{ matrix.branch }}-${{ steps.version.outputs.version }}
+          dispatch-target: ${{ vars.PACKAGES_REPO }}
+          dispatch-token: ${{ secrets.DISPATCH_TOKEN }}
+          gpg_secret_base64: ${{ secrets.gpg_secret_base64 }}
+          additional_gpg: ${{ vars.ADDITIONAL_GPG }}
+          additional_repo: ${{ vars.ADDITIONAL_REPO }}
