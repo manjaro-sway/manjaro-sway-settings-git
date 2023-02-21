@@ -2,7 +2,7 @@
 
 pkgname=manjaro-sway-settings-git
 pkgver=r1859.665f211c
-pkgrel=1
+pkgrel=2
 arch=('any')
 _pkgbase=desktop-settings
 url="https://github.com/Manjaro-Sway/$_pkgbase"
@@ -33,7 +33,7 @@ depends=(
     'wl-clipboard'            # copy/paste utilities for wayland
     'nwg-wrapper'             # conky like onscreen information'
     'noto-fonts-emoji'        # emoji font (e.g. weather icons)
-    'ttf-liberation'          # contains the roboto font used in a lot of places
+    'ttf-roboto'              # contains the roboto font used in a lot of places
     'htop'                    # system monitor
     'swappy'                  # screenshot editing tool
     'inotify-tools'           # file watchers etc
