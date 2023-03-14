@@ -2,7 +2,7 @@
 
 pkgname=manjaro-sway-settings-git
 pkgver=r1866.5bad2d72
-pkgrel=1
+pkgrel=2
 arch=('any')
 _pkgbase=desktop-settings
 url="https://github.com/Manjaro-Sway/$_pkgbase"
@@ -39,6 +39,7 @@ depends=(
     'inotify-tools'           # file watchers etc
     'bluetuith'               # bluetooth management tool
     'swayr'                   # lru window switcher for sway
+    'bc'                      # basic tiny calculation util
 )
 makedepends=('git')
 optdepends=(
