@@ -25,7 +25,7 @@ depends=(
     'foot'                    # terminal application
     'foot-terminfo'           # terminal info for foot
     'ttf-roboto-mono-nerd'    # default monospace font
-    'ttf-meslo-nerd-font-powerlevel10k' # future monosprace font
+    'ttf-jetbrains-mono-nerd' # future monosprace font
     'jq'                      # json parsing and manipulation
     'calcurse'                # tui calendar application
     'lm_sensors'              # display sensor information
