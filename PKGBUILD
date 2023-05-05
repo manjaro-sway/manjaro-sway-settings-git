@@ -1,7 +1,7 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
 pkgname=manjaro-sway-settings-git
-pkgver=r1877.233c18e9
+pkgver=r1878.64000e6d
 pkgrel=1
 arch=('any')
 _pkgbase=desktop-settings
@@ -14,7 +14,7 @@ depends=(
     'waybar'                  # configurable bar
     'light'                   # cli to control brightness
     'mako'                    # desktop notifications
-    'sway'                    # the desktop manager
+    'sway'                    # window manager
     'rofi-wayland'            # launcher application
     'swaylock'                # lockscreen
     'swayidle'                # idle management daemon
@@ -24,7 +24,6 @@ depends=(
     'wob'                     # wayland overlay bar for brightness and volume
     'foot'                    # terminal application
     'foot-terminfo'           # terminal info for foot
-    'ttf-roboto-mono-nerd'    # default monospace font
     'ttf-jetbrains-mono-nerd' # next monospace font
     'jq'                      # json parsing and manipulation
     'calcurse'                # tui calendar application
