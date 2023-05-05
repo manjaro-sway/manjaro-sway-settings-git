@@ -1,7 +1,7 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
 pkgname=manjaro-sway-settings-git
-pkgver=r1876.dbed2a86
+pkgver=r1877.233c18e9
 pkgrel=1
 arch=('any')
 _pkgbase=desktop-settings
