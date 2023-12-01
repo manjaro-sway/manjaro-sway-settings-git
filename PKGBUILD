@@ -2,7 +2,7 @@
 
 pkgname=manjaro-sway-settings-git
 pkgver=r1950.cff70bd7
-pkgrel=1
+pkgrel=2
 arch=('any')
 _pkgbase=desktop-settings
 url="https://github.com/Manjaro-Sway/$_pkgbase"
@@ -24,22 +24,26 @@ depends=(
     'wob'                     # wayland overlay bar for brightness and volume
     'foot'                    # terminal application
     'foot-terminfo'           # terminal info for foot
-    'ttf-jetbrains-mono-nerd' # next monospace font
     'jq'                      # json parsing and manipulation
     'calcurse'                # tui calendar application
     'lm_sensors'              # display sensor information
-    'manjaro-sway-wallpapers' # manjaro sway themed backgrounds
     'wf-recorder'             # screen recording util
     'wl-clipboard'            # copy/paste utilities for wayland
     'nwg-wrapper'             # conky like onscreen information'
     'noto-fonts-emoji'        # emoji font (e.g. weather icons)
-    'ttf-roboto'              # contains the roboto font used in a lot of places
     'htop'                    # system monitor
     'swappy'                  # screenshot editing tool
     'inotify-tools'           # file watchers etc
     'bluetuith'               # bluetooth management tool
     'swayr'                   # lru window switcher for sway
     'bc'                      # basic tiny calculation util
+    ## theme
+    'ttf-jetbrains-mono-nerd' # default monospace font
+    'ttf-roboto'              # default font
+    'papirus-maia-icon-theme' # default icon theme
+    'xcursor-breeze'          # default cursor theme
+    'matcha-gtk-theme'        # default gtk (gnome etc.) theme
+    'kvantum-theme-matcha'    # default kvantum (kde etc.) theme
 )
 makedepends=('git')
 optdepends=(
