@@ -1,7 +1,7 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
 pkgname=manjaro-sway-settings-git
-pkgver=r1957.f86ec46f
+pkgver=r1958.2b43ce6c
 pkgrel=1
 arch=('any')
 _pkgbase=desktop-settings
@@ -37,6 +37,7 @@ depends=(
     'bluetuith'               # bluetooth management tool
     'swayr'                   # lru window switcher for sway
     'bc'                      # basic tiny calculation util
+    'xdg-terminal-exec-git'   # upcoming execute in terminal xdg standard
     ## theme
     'ttf-jetbrains-mono-nerd' # default monospace font
     'ttf-roboto'              # default font
