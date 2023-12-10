@@ -1,7 +1,7 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
 pkgname=manjaro-sway-settings-git
-pkgver=r1977.da914d27
+pkgver=r1979.e59cccc8
 pkgrel=1
 arch=('any')
 _pkgbase=desktop-settings
@@ -39,6 +39,7 @@ depends=(
     'bc'                    # basic tiny calculation util
     'xdg-terminal-exec-git' # upcoming execute in terminal xdg standard
     'idlehack-git'          # inhibit swayidle on dbus messages that request screensaver inhibit
+    'dex'                   # executes desktop entries on autostart
     ## theme
     'ttf-jetbrains-mono-nerd' # default monospace font
     'ttf-roboto'              # default font
