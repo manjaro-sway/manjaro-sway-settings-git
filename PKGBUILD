@@ -1,7 +1,7 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
 pkgname=manjaro-sway-settings-git
-pkgver=r1986.c4be8347
+pkgver=r1987.bd45d66f
 pkgrel=1
 arch=('any')
 _pkgbase=desktop-settings
@@ -55,7 +55,7 @@ optdepends=(
     'swaylock-effects: swaylock with nicer effects'
     'wlsunset: time & place based light temperature'
     'kanshi: automatically load matching output profiles'
-    'autotiling-rs: automated tiling'
+    'autotiling: automated tiling'
     'sworkstyle: dynamic workspace names (icons) in waybar'
     'nwg-wrapper: conky like onscreen information'
     'cliphist: clipboard manager'
