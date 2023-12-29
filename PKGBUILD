@@ -18,7 +18,6 @@ depends=(
     'rofi-wayland'          # launcher application
     'swaylock'              # lockscreen
     'swayidle'              # idle management daemon
-    'swayr'                 # window switcher
     'grim'                  # screenshot tool
     'slurp'                 # helper for grim
     'wob'                   # wayland overlay bar for brightness and volume
@@ -65,6 +64,8 @@ optdepends=(
     'dex: execute DesktopEntry files on autostart'
     'poweralertd: battery and power notifications'
     'wluma: adaptive brightness based on screen contents and ALS'
+    'valent: kdeconnect-like tool without the kde bloat'
+
 )
 conflicts=('manjaro-sway-settings-git')
 provides=('manjaro-desktop-settings')
