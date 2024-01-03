@@ -1,7 +1,7 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
 pkgname=manjaro-sway-settings-git
-pkgver=r2008.aafca2dd
+pkgver=r2010.0e9dfa1f
 pkgrel=1
 arch=('any')
 _pkgbase=desktop-settings
@@ -53,7 +53,6 @@ optdepends=(
     'flashfocus: better flashing on focus changes'
     'swaylock-effects: swaylock with nicer effects'
     'wlsunset: time & place based light temperature'
-    'autotiling: automated tiling'
     'way-displays: automated display management'
     'autotiling: automated tiling'
     'sworkstyle: dynamic workspace names (icons) in waybar'
@@ -65,7 +64,7 @@ optdepends=(
     'poweralertd: battery and power notifications'
     'wluma: adaptive brightness based on screen contents and ALS'
     'valent: kdeconnect-like tool without the kde bloat'
-
+    'pacseek: package manager tui'
 )
 conflicts=('manjaro-sway-settings-git')
 provides=('manjaro-desktop-settings')
