@@ -12,7 +12,7 @@ groups=('sway-manjaro')
 depends=(
     'manjaro-base-skel'
     'waybar'                # configurable bar
-    'brightnessctl'                 # cli to control brightness
+    'brightnessctl'         # cli to control brightness
     'mako'                  # desktop notifications
     'sway'                  # window manager
     'rofi-wayland'          # launcher application
