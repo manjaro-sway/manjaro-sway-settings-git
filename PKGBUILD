@@ -2,7 +2,7 @@
 
 pkgname=manjaro-sway-settings-git
 pkgver=r2012.fd99f469
-pkgrel=1
+pkgrel=2
 arch=('any')
 _pkgbase=desktop-settings
 url="https://github.com/Manjaro-Sway/$_pkgbase"
@@ -18,6 +18,7 @@ depends=(
     'rofi-wayland'          # launcher application
     'swaylock'              # lockscreen
     'sway-services'         # systemd services for sway
+    'wl-clip-persist'       # persists clipboard content between containers
     'swayidle'              # idle management daemon
     'grim'                  # screenshot tool
     'slurp'                 # helper for grim
