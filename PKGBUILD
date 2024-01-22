@@ -2,7 +2,7 @@
 
 pkgname=manjaro-sway-settings-git
 pkgver=r2018.24d6b298
-pkgrel=1
+pkgrel=2
 arch=('any')
 _pkgbase=desktop-settings
 url="https://github.com/Manjaro-Sway/$_pkgbase"
@@ -41,6 +41,7 @@ depends=(
     'xdg-terminal-exec'     # upcoming execute in terminal xdg standard
     'idlehack'              # inhibit swayidle on dbus messages that request screensaver inhibit
     'dex'                   # executes desktop entries on autostart
+    'swaybg'                # wallpaper setter
     ## theme
     'ttf-jetbrains-mono-nerd' # default monospace font
     'ttf-roboto'              # default font
