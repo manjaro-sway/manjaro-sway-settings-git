@@ -1,7 +1,7 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
 pkgname=manjaro-sway-settings-git
-pkgver=r2025.f54ab723
+pkgver=r2028.c36576d7
 pkgrel=1
 arch=('any')
 _pkgbase=desktop-settings
@@ -34,6 +34,7 @@ depends=(
     'noto-fonts-emoji'      # emoji font (e.g. weather icons)
     'htop'                  # system monitor
     'swappy'                # screenshot editing tool
+    'grimshot'              # screenshot tool
     'inotify-tools'         # file watchers etc
     'bluetuith'             # bluetooth management tool
     'swayr'                 # lru window switcher for sway
