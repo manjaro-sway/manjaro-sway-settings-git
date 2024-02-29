@@ -1,4 +1,4 @@
 _extends: manjaro-contrib/.github
 repository:
   homepage: __UPSTREAM__
-  topics: arch, package, any
+
