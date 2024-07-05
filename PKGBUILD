@@ -1,7 +1,7 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
 pkgname=manjaro-sway-settings-git
-pkgver=r2116.14c6a506
+pkgver=r2117.5baa8a1f
 pkgrel=1
 arch=('any')
 _pkgbase=desktop-settings
@@ -43,6 +43,7 @@ depends=(
     'idlehack'              # inhibit swayidle on dbus messages that request screensaver inhibit
     'dex'                   # executes desktop entries on autostart
     'swaybg'                # wallpaper setter
+    'rofimoji'              # emoji picker
     ## theme
     'kvantum'                 # theme engine for qt
     'kvantum-qt5'             # theme engine for qt (qt 5 support)
