@@ -2,7 +2,7 @@
 
 pkgname=manjaro-sway-settings-git
 pkgver=r2117.b2145913
-pkgrel=1
+pkgrel=2
 arch=('any')
 _pkgbase=desktop-settings
 url="https://github.com/Manjaro-Sway/$_pkgbase"
@@ -44,6 +44,7 @@ depends=(
     'dex'                   # executes desktop entries on autostart
     'swaybg'                # wallpaper setter
     'rofimoji'              # emoji picker
+    'wtype'                 # programmatically type
     ## theme
     'kvantum'                 # theme engine for qt
     'kvantum-qt5'             # theme engine for qt (qt 5 support)
