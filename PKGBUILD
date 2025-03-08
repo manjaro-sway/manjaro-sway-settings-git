@@ -1,7 +1,7 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
 pkgname=manjaro-sway-settings-git
-pkgver=r2139.3b0cea4c
+pkgver=r2140.b1db1e14
 pkgrel=1
 arch=('any')
 _pkgbase=desktop-settings
@@ -59,7 +59,7 @@ makedepends=('git')
 optdepends=(
     'qutebrowser: a keyboard-centric browser'
     'flashfocus: better flashing on focus changes'
-    'swaylock: lockscreen'
+    'gtklock: lockscreen'
     'wlsunset: time & place based light temperature'
     'way-displays: automated display management'
     'autotiling: automated tiling'
