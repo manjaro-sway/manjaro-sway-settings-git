@@ -16,7 +16,7 @@ depends=(
     'mako'                  # desktop notifications
     'sway'                  # window manager
     'rofi-wayland'          # launcher application
-    'swaylock'              # lockscreen
+    'gtklock'               # lockscreen
     'sway-services'         # systemd services for sway
     'wl-clip-persist'       # persists clipboard content between containers
     'swayidle'              # idle management daemon
