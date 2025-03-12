@@ -1,7 +1,7 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
 pkgname=manjaro-sway-settings-git
-pkgver=r2143.fed9b04a
+pkgver=r2144.ec696796
 pkgrel=1
 arch=('any')
 _pkgbase=desktop-settings
@@ -16,7 +16,6 @@ depends=(
     'mako'              # desktop notifications
     'sway'              # window manager
     'rofi-wayland'      # launcher application
-    'gtklock'           # lockscreen
     'sway-services'     # systemd services for sway
     'wl-clip-persist'   # persists clipboard content between containers
     'swayidle'          # idle management daemon
