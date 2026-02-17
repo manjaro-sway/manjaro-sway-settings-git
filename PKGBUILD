@@ -2,7 +2,7 @@
 
 pkgname=manjaro-sway-settings-git
 pkgver=r2156.2a0a6fd0
-pkgrel=1
+pkgrel=2
 arch=('any')
 _pkgbase=desktop-settings
 url="https://github.com/Manjaro-Sway/$_pkgbase"
@@ -50,7 +50,7 @@ depends=(
     'ttf-jetbrains-mono-nerd' # default monospace font
     'ttf-roboto'              # default font
     'papirus-maia-icon-theme' # default icon theme
-    'xcursor-breeze'          # default cursor theme
+    'breeze-cursors5'         # default cursor theme
     'matcha-gtk-theme'        # default gtk (gnome etc.) theme
     'kvantum-theme-matcha'    # default kvantum (kde etc.) theme
 )
