@@ -1,7 +1,7 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
 pkgname=manjaro-sway-settings-git
-pkgver=r2162.3357017b
+pkgver=r2165.6f5b005f
 pkgrel=1
 arch=('any')
 _pkgbase=desktop-settings
@@ -50,7 +50,7 @@ depends=(
     'ttf-jetbrains-mono-nerd' # default monospace font
     'ttf-roboto'              # default font
     'papirus-maia-icon-theme' # default icon theme
-    'breeze-cursors5'         # default cursor theme
+    'phinger-cursors'         # default cursor theme
     'matcha-gtk-theme'        # default gtk (gnome etc.) theme
     'kvantum-theme-matcha'    # default kvantum (kde etc.) theme
 )
