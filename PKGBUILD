@@ -1,7 +1,7 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
 pkgname=manjaro-sway-settings-git
-pkgver=r2210.b7290293
+pkgver=r2217.8f847994
 pkgrel=1
 arch=('any')
 _pkgbase=desktop-settings
@@ -52,6 +52,7 @@ depends=(
     'phinger-cursors'         # default cursor theme
     'matcha-gtk-theme'        # default gtk (gnome etc.) theme
     'kvantum-theme-matcha'    # default kvantum (kde etc.) theme
+    'kvantum-theme-catppuccin-git' # kvantum themes for catppuccin, dracula and nordic
 )
 makedepends=('git')
 optdepends=(
