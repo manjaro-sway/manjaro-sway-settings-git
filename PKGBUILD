@@ -1,7 +1,7 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
 pkgname=manjaro-sway-settings-git
-pkgver=r2178.8cf36380
+pkgver=r2180.86d78b71
 pkgrel=1
 arch=('any')
 _pkgbase=desktop-settings
@@ -29,7 +29,7 @@ depends=(
     'lm_sensors'        # display sensor information
     'wf-recorder'       # screen recording util
     'wl-clipboard'      # copy/paste utilities for wayland
-    'nwg-wrapper'       # conky like onscreen information'
+    'nwg-wrapper'       # conky like onscreen information
     'noto-fonts-emoji'  # emoji font (e.g. weather icons)
     'btop'              # system monitor
     'swappy'            # screenshot editing tool
@@ -55,7 +55,6 @@ depends=(
 )
 makedepends=('git')
 optdepends=(
-    'qutebrowser: a keyboard-centric browser'
     'flashfocus: better flashing on focus changes'
     'waylock: reference lockscreen for ext-session-lock-v1'
     'gtklock: lockscreen based on gtkgreet'
@@ -65,11 +64,9 @@ optdepends=(
     'way-displays: automated display management'
     'autotiling: automated tiling'
     'sworkstyle: dynamic workspace names (icons) in waybar'
-    'nwg-wrapper: conky like onscreen information'
     'cliphist: clipboard manager'
     'swaycwd: open here helper'
     'zeit: a simple time tracker'
-    'dex: execute DesktopEntry files on autostart'
     'poweralertd: battery and power notifications'
     'wluma: adaptive brightness based on screen contents and ALS'
     'valent: kdeconnect-like tool without the kde bloat'
