@@ -1,7 +1,7 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
 pkgname=manjaro-sway-settings-git
-pkgver=r2189.17bc3077
+pkgver=r2191.d80bdda5
 pkgrel=1
 arch=('any')
 _pkgbase=desktop-settings
@@ -43,6 +43,10 @@ depends=(
     'dex'               # executes desktop entries on autostart
     'swaybg'            # wallpaper setter
     'rofimoji'          # emoji picker
+    ## portal
+    'xdg-desktop-portal-lxqt' # lxqt file chooser portal
+    'lxqt-qtplugin'            # lxqt qt platform plugin
+    'lxqt-config'              # lxqt appearance configuration
     ## theme
     'kvantum'                 # theme engine for qt
     'kvantum-qt5'             # theme engine for qt (qt 5 support)
